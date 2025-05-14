@@ -2,30 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="1200"/>
-
+  <meta property="og:image:height" content="630"/> <!-- Corrected as per optimal dimensions comment -->
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <title>LLamalamaII🦙🤗</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> <!-- Uncommented -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -44,16 +37,15 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 
-  <!-- CUSTOM CSS FOR RESPONSIVE VIDEO AND PDF -->
   <style>
     .video-container {
       position: relative;
       padding-bottom: 56.25%; /* 16:9 aspect ratio */
       height: 0;
       overflow: hidden;
-      max-width: 100%;
-      background: #000; /* Optional: background for letterboxing */
-      margin-bottom: 1.5rem; /* Add some space below the video */
+      /* max-width: 100%; REMOVED to allow full width when parent is full width */
+      background: #000;
+      /* margin-bottom: 1.5rem; Removed, section will provide spacing */
     }
 
     .video-container iframe,
@@ -67,13 +59,20 @@
     }
 
     .pdf-container {
-        /* You can adjust max-width if you want the PDF not to be full width on very large screens */
-        /* max-width: 900px; */
-        margin: 0 auto; /* Centers the container if max-width is set */
+        margin: 0 auto;
     }
 
     .pdf-container iframe {
-        border: 1px solid #ccc; /* Optional: adds a light border around the PDF */
+        border: 1px solid #ccc;
+    }
+
+    .poster-image {
+        display: block; /* To allow margin auto to work for centering */
+        max-width: 100%; /* Responsive */
+        height: auto;   /* Maintain aspect ratio */
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc; /* Optional border */
     }
   </style>
 </head>
@@ -100,14 +99,14 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block">TSE<br>Mini Conferance 2025</span>
               <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-              <span class="eql-cntrb"><small><br><sup>**</sup>Coresponding Author</small></span>
+              <span class="eql-cntrb"><small><br><sup>**</sup>Corresponding Author</small></span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                    <!-- Arxiv PDF link -->
                    <span class="link-block">
-                    <a href="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/view?usp=drive_link" target="_blank"
+                    <a href="https://drive.google.com/file/d/1HQNWWM4Ifsh9EBV3ZqssU7Ft5lczGnaz/view?usp=drive_link" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -137,25 +136,21 @@
 
 <!-- Teaser video -->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        Demo Video
-      </h2>
-      <!-- YouTube Embed Start -->
-      <div class="video-container">
-      <iframe width="1200" height="1200" src="https://www.youtube.com/embed/ArQVLrD_F0c?si=eZ1C0jdqQyxnvvGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <!-- YouTube Embed End -->
-      <!--
-      Remove old video attempts:
-      <iframe width="1920" height="1080" src="https://drive.google.com/file/d/12iRE3CE_mO8f3cxLVpkFilHzOhOB4MzX/view?usp=sharing">
+  <!-- Title in a standard container -->
+  <div class="container is-max-desktop" style="padding-top: 2rem; padding-bottom: 1rem;">
+    <h2 class="subtitle has-text-centered">
+      Demo Video
+    </h2>
+  </div>
+  <div class="hero-body" style="padding: 0;"> 
+    <div class="video-container"> 
+      <iframe src="https://www.youtube.com/embed/ArQVLrD_F0c?si=eZ1C0jdqQyxnvvGj"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
       </iframe>
-      <video poster="" id="tree" autoplay controls muted loop height="200%">
-        <source src="https://drive.google.com/file/d/12iRE3CE_mO8f3cxLVpkFilHzOhOB4MzX/view?usp=sharing"
-        type="video/mp4">
-      </video>
-      -->
     </div>
   </div>
 </section>
@@ -188,13 +183,14 @@
         2. Change '/view?usp=sharing' to '/preview'
         So the src becomes: https://drive.google.com/file/d/YOUR_FILE_ID/preview
       -->
-      <iframe src="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/preview"
-              style="width:1000vh; height:1000vh;"
+      
+      <iframe src="https://drive.google.com/file/d/1HQNWWM4Ifsh9EBV3ZqssU7Ft5lczGnaz/preview"
+              style="width:1000; height:1000;"
               allow="fullscreen">
       </iframe>
       <p class="has-text-centered" style="margin-top: 10px;">
           If the embedded PDF doesn't load, you can
-          <a href="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/view?usp=drive_link" target="_blank">open it directly</a>.
+          <a href="https://drive.google.com/file/d/1HQNWWM4Ifsh9EBV3ZqssU7Ft5lczGnaz/view?usp=drive_link" target="_blank">open it directly</a>.
       </p>
     </div>
   </div>
@@ -207,7 +203,7 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
-      <iframe  src="./static/images/Poster_page_small.jpg" style="width: 100%; height: 100%;">
+      <iframe  src="./static/images/Poster_page_small.jpg" style="width: 1200; height: 600;">
       </iframe>
     
   </div>
