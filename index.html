@@ -67,12 +67,7 @@
     }
 
     .poster-image {
-        display: block; /* To allow margin auto to work for centering */
-        max-width: 100%; /* Responsive */
-        height: auto;   /* Maintain aspect ratio */
-        margin-left: auto;
-        margin-right: auto;
-        border: 1px solid #ccc; /* Optional border */
+        max-width: 100%;
     }
   </style>
 </head>
@@ -171,31 +166,6 @@
     </div>
   </div>
 </section>
-
-<!-- Paper Document Embed -->
-<section class="section" id="paper-document"> <!-- Changed from hero is-small is-light to make it a standard section -->
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Paper Document</h2>
-    <div class="pdf-container">
-      <!--
-        To embed a Google Drive PDF:
-        1. Get the shareable link, e.g., https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing
-        2. Change '/view?usp=sharing' to '/preview'
-        So the src becomes: https://drive.google.com/file/d/YOUR_FILE_ID/preview
-      -->
-      
-      <iframe src="https://drive.google.com/file/d/1HQNWWM4Ifsh9EBV3ZqssU7Ft5lczGnaz/preview"
-              style="width:1000; height:1000;"
-              allow="fullscreen">
-      </iframe>
-      <p class="has-text-centered" style="margin-top: 10px;">
-          If the embedded PDF doesn't load, you can
-          <a href="https://drive.google.com/file/d/1HQNWWM4Ifsh9EBV3ZqssU7Ft5lczGnaz/view?usp=drive_link" target="_blank">open it directly</a>.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- End Paper Document Embed -->
 
 
 <!-- Paper poster -->
