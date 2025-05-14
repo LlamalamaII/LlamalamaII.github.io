@@ -2,13 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
   <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
@@ -16,7 +16,7 @@
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
@@ -25,7 +25,7 @@
 
 
   <title>LLamalamaII🦙🤗</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -43,6 +43,39 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- CUSTOM CSS FOR RESPONSIVE VIDEO AND PDF -->
+  <style>
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000; /* Optional: background for letterboxing */
+      margin-bottom: 1.5rem; /* Add some space below the video */
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .pdf-container {
+        /* You can adjust max-width if you want the PDF not to be full width on very large screens */
+        /* max-width: 900px; */
+        margin: 0 auto; /* Centers the container if max-width is set */
+    }
+
+    .pdf-container iframe {
+        border: 1px solid #ccc; /* Optional: adds a light border around the PDF */
+    }
+  </style>
 </head>
 <body>
 
@@ -56,68 +89,73 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-               
-                  <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Kun Kerdthaisong</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Suwijak Tantamaroj</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Nawin Somyat</a>
-                  </span>
-                  </div>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Kun Kerdthaisong</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Suwijak Tantamaroj</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Nawin Somyat</a><sup>**</sup>,</span>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Thammasat University<br>Mini Conferance 2025</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">TSE<br>Mini Conferance 2025</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              <span class="eql-cntrb"><small><br><sup>**</sup>Coresponding Author</small></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                         <span class="link-block">
-                          <a href="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/view?usp=drive_link" target="_blank"
-                          class="external-link button is-normal is-rounded is-dark">
-                          <span class="icon">
-                            <i class="fas fa-file-pdf"></i>
-                          </span>
-                          <span>Paper report</span>
-                        </a>
-                      </span>
-
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/cn40x/Llamalama_II" target="_blank"
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                   <!-- Arxiv PDF link -->
+                   <span class="link-block">
+                    <a href="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/view?usp=drive_link" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Paper Report</span>
                   </a>
                 </span>
 
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/cn40x/Llamalama_II" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser video -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        Demo Video
+      </h2>
+      <!-- YouTube Embed Start -->
+      <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ArQVLrD_F0c?si=eZ1C0jdqQyxnvvGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <!-- YouTube Embed End -->
+      <!--
+      Remove old video attempts:
       <iframe width="1920" height="1080" src="https://drive.google.com/file/d/12iRE3CE_mO8f3cxLVpkFilHzOhOB4MzX/view?usp=sharing">
       </iframe>
-<!--       <video poster="" id="tree" autoplay controls muted loop height="200%"> -->
-        <!-- Your video here -->
-<!--         <source src="https://drive.google.com/file/d/12iRE3CE_mO8f3cxLVpkFilHzOhOB4MzX/view?usp=sharing"
+      <video poster="" id="tree" autoplay controls muted loop height="200%">
+        <source src="https://drive.google.com/file/d/12iRE3CE_mO8f3cxLVpkFilHzOhOB4MzX/view?usp=sharing"
         type="video/mp4">
-      </video> -->
-      <h2 class="subtitle has-text-centered">
-        demo video
-      </h2>
+      </video>
+      -->
     </div>
   </div>
 </section>
@@ -138,13 +176,30 @@
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
 
-
-
-
-
-
+<!-- Paper Document Embed -->
+<section class="section" id="paper-document"> <!-- Changed from hero is-small is-light to make it a standard section -->
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Paper Document</h2>
+    <div class="pdf-container">
+      <!--
+        To embed a Google Drive PDF:
+        1. Get the shareable link, e.g., https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing
+        2. Change '/view?usp=sharing' to '/preview'
+        So the src becomes: https://drive.google.com/file/d/YOUR_FILE_ID/preview
+      -->
+      <iframe src="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/preview"
+              style="width:100%; height:80vh;"
+              allow="fullscreen">
+      </iframe>
+      <p class="has-text-centered" style="margin-top: 10px;">
+          If the embedded PDF doesn't load, you can
+          <a href="https://drive.google.com/file/d/1B0DAUleahhvhurWa7-fStslsVAnmCy4L/view?usp=drive_link" target="_blank">open it directly</a>.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Paper Document Embed -->
 
 
 <!-- Paper poster -->
@@ -196,7 +251,7 @@
 </footer>
 
 <!-- Statcounter tracking code -->
-  
+
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
